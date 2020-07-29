@@ -1,8 +1,3 @@
-/*
-background-image: url(img/kid_boy.jpg);
-    background-size: cover;
-    background-position: center;
-*/
 
 var botao = document.getElementById("action");
 botao.addEventListener("click", clicar);
@@ -21,26 +16,48 @@ function clicar(){
         var sexo = document.getElementsByName("sex");
         var idade = ano_atual - Number(ano.value);
         var genero = '';
-
-        var photo = document.createElement('div');
-        photo.setAttribute('id', 'photo');
-        photo.style.width = "300px";
-        photo.style.height = "300px";
-        photo.style.margin = "auto";
-        photo.style.borderRadius = "50%";
-        photo.style.backgroundColor = "grey";
+        var photo = document.querySelector("div.photo");
         
         if (sexo[0].checked){
             genero = "Homem";
+            photo.style.display = "block"
+
+            if (idade <= 10){
+                photo.style.backgroundImage = "url(img/kid_boy.png)";
+            }
+            else if (idade <= 25){
+                photo.style.backgroundImage = "url(img/young_boy.png)"
+            }
+            else if (idade <= 50){
+                photo.style.backgroundImage = "url(img/mature_boy.png)"
+            }
+            else{
+                photo.style.backgroundImage = "url(img/old_men.png)"
+            }
         }
         else if (sexo[1].checked){
             genero = "Mulher";
+            photo.style.display = "block"
+
+            if (idade <= 10){
+                photo.style.backgroundImage = "url(img/kid_girl.png)";
+            }
+            else if (idade <= 25){
+                photo.style.backgroundImage = "url(img/young_girl.png)"
+            }
+            else if (idade <= 50){
+                photo.style.backgroundImage = "url(img/mature_girl.png)"
+            }
+            else{
+                photo.style.backgroundImage = "url(img/old_woman.png)"
+            }
         }
         else{
             window.alert("Gênero inválido!");
         }
 
-        
+        var text = document.querySelector(".res>p");
+        text.innerHTML = `Detectado ${genero} com ${idade} anos.`;
     }
 
 }
