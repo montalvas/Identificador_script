@@ -1,0 +1,73 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif; /*300,400,700*/
+}
+
+body{
+    background-color: dodgerblue;
+    color: white;
+    text-align: center;
+}
+
+header{
+    padding: 30px 0;
+}
+
+section{
+    width: 500px;
+    margin: 0 auto;
+    padding: 20px 30px;
+    background-color: white;
+    color: black;
+    border-radius: 3%;
+    text-align: left;
+    font-size: 18px;
+}
+
+section > div{
+    padding: 10px 0;
+}
+
+#masc, #fem{
+    margin-left: 10px;
+}
+
+.sexo > input{
+    padding: 0 10px;
+}
+
+.img{
+    text-align: center;
+}
+
+#action{
+    padding: 3px 5px;
+    margin: 5px 0;
+    text-transform: capitalize;
+    font-size: 16px;
+}
+
+.img > p{
+    padding: 10px 0;
+}
+
+.photo{
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    border-radius: 50%;
+    display: none;
+}
+
+footer{
+    padding: 30px 0;
+}
+
+a{
+    text-decoration: none;
+    font-style: italic;
+    color: white;
+    font-size: 20px;
+}
