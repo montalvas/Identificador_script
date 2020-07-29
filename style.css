@@ -30,6 +30,10 @@ section > div{
     padding: 10px 0;
 }
 
+#nasc{
+    padding: 3px 5px;
+}
+
 #masc, #fem{
     margin-left: 10px;
 }
@@ -49,16 +53,8 @@ section > div{
     font-size: 16px;
 }
 
-.img > p{
+.res{
     padding: 10px 0;
-}
-
-.photo{
-    width: 300px;
-    height: 300px;
-    margin: auto;
-    border-radius: 50%;
-    display: none;
 }
 
 footer{
