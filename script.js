@@ -6,8 +6,6 @@ function clicar(){
     var date = new Date();
     var ano_atual = date.getFullYear();
     var ano = document.getElementById("nasc");
-    var res = document.querySelector("div.res");
-    
 
     if (ano.value.length == 0 || Number(ano.value) > ano_atual){
         window.alert("[ERRO] Verifique os dados e tente novamente!");
@@ -55,7 +53,7 @@ function clicar(){
         else{
             window.alert("Gênero inválido!");
         }
-
+        
         var text = document.querySelector(".res>p");
         text.innerHTML = `Detectado ${genero} com ${idade} anos.`;
     }
